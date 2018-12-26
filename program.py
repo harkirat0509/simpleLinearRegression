@@ -16,6 +16,7 @@ from sklearn.metrics import r2_score
 data = pd.read_csv('FuelConsumptionCo2.csv')
 
 #distribution of dataset
+np.random.seed(1)
 mask = np.random.rand(len(data)) < 0.8
 train = data[mask]
 test = data[~mask]
